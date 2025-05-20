@@ -40,3 +40,13 @@ export interface IOrderResult {
   id: string;
   total: number;
 }
+
+// Корзина
+
+export interface ICartModel {
+  getItems(): IProduct[];
+  addItem(product: IProduct): void;
+  removeItem(productId: string): void;
+  clear(): void;
+  getTotal(): number;
+}
